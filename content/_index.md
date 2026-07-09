@@ -5,7 +5,7 @@
     name="Patrick Stock",
     subtitle="Computer Engineer",
     image="/profile-photo.jpg",
-    github="https://github.com/Pstock7",
+    github="https://github.com/pstock7",
     email="pstockdev@gmail.com",
     linkedin="https://www.linkedin.com/in/patricktstock/"
 ) }}
