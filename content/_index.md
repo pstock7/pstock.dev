@@ -38,7 +38,6 @@
 
 - **Focus:** Networking & Cybersecurity
 - **Courses Completed:** Information Theory, Network Architecture and Protocols, System and Software Security
-Security
 {% end %}
 
 {% resume_card(title="Bachelor of Science in Computer Engineering",
