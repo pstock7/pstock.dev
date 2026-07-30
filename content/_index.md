@@ -12,7 +12,7 @@
 
 ## Experience
 
-{% resume_card(title="Associate DSP Software Engineer",
+{% resume_card(title="DSP Software Engineer",
                date="June 2024 - Present",
                location="Parsons") %}
 
