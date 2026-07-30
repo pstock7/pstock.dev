@@ -17,7 +17,7 @@
                location="Parsons") %}
 
 - Regularly flown to California to act as a software subject matter expert to help customer hardware, software, and signal integration.
-- Created countless customer-requested services including ingesting and processing radio IQ data, sending messages to coordinate with other services, and testing critical applications.
+- Created countless customer-requested services including ingesting and processing radio IQ data, sending messages to coordinate with other services, and testing mission-critical applications.
 
 {% end %}
 
