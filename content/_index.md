@@ -4,7 +4,7 @@
 {{ profile_header(
     name="Patrick Stock",
     subtitle="Computer Engineer",
-    image="/profile-photo.jpg",
+    image="/profile-photo.avif",
     github="https://github.com/pstock7",
     email="pstockdev@gmail.com",
     linkedin="https://www.linkedin.com/in/patricktstock/"
