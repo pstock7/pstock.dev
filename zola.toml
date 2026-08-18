@@ -4,3 +4,5 @@ title = "Patrick Stock"
 author = "Patrick Stock"
 
 default_language = "en"
+
+minify_html = true
