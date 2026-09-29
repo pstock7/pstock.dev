@@ -1,0 +1,338 @@
+:root {
+  /* Catppuccin Mocha palette */
+  --ctp-rosewater: #f5e0dc;
+  --ctp-flamingo: #f2cdcd;
+  --ctp-pink: #f5c2e7;
+  --ctp-mauve: #cba6f7;
+  --ctp-red: #f38ba8;
+  --ctp-maroon: #eba0ac;
+  --ctp-peach: #fab387;
+  --ctp-yellow: #f9e2af;
+  --ctp-green: #a6e3a1;
+  --ctp-teal: #94e2d5;
+  --ctp-sky: #89dceb;
+  --ctp-sapphire: #74c7ec;
+  --ctp-blue: #89b4fa;
+  --ctp-lavender: #b4befe;
+  --ctp-text: #cdd6f4;
+  --ctp-subtext1: #bac2de;
+  --ctp-subtext0: #a6adc8;
+  --ctp-overlay2: #9399b2;
+  --ctp-overlay1: #7f849c;
+  --ctp-overlay0: #6c7086;
+  --ctp-surface2: #585b70;
+  --ctp-surface1: #45475a;
+  --ctp-surface0: #313244;
+  --ctp-base: #1e1e2e;
+  --ctp-mantle: #181825;
+  --ctp-crust: #11111b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--ctp-base);
+  color: var(--ctp-text);
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: var(--ctp-blue);
+}
+
+a:hover {
+  color: var(--ctp-sapphire);
+}
+
+a:focus-visible {
+  border-radius: 3px;
+  outline: 3px solid var(--ctp-yellow);
+  outline-offset: 3px;
+}
+
+h1 {
+  color: var(--ctp-mauve);
+}
+
+h2 {
+  color: var(--ctp-peach);
+  margin: 1rem 0 0.75rem;
+}
+
+h3 {
+  color: var(--ctp-blue);
+}
+
+.section {
+  padding: 2rem 0 4rem;
+}
+
+.container {
+  display: grid;
+  width: 90%;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  background-color: var(--ctp-crust);
+}
+
+.profile-avatar {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--ctp-mauve);
+  border-radius: 50%;
+  object-fit: cover;
+  font-size: 0;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.profile-name {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.profile-subtitle {
+  margin: 0;
+  color: var(--ctp-subtext0);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.profile-summary {
+  max-width: 42rem;
+  margin: 0.5rem 0 0;
+  color: var(--ctp-subtext1);
+}
+
+.profile-socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.profile-socials a {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem;
+  color: var(--ctp-subtext0);
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.profile-socials a:hover {
+  color: var(--ctp-mauve);
+  transform: translateY(-2px);
+}
+
+.resume-card,
+.skills-card {
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 1rem;
+  border: 2px solid var(--ctp-surface0);
+  border-radius: 8px;
+  background-color: var(--ctp-surface0);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.resume-card-header {
+  margin-bottom: 0.35rem;
+}
+
+.resume-card-title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.resume-card-metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.resume-card-date,
+.resume-card-organization,
+.resume-card-location {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--ctp-subtext0);
+  font-size: 0.85rem;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+.resume-card-date svg,
+.resume-card-organization svg,
+.resume-card-location svg {
+  flex: 0 0 auto;
+}
+
+.resume-card-content > :first-child {
+  margin-top: 0.75rem;
+}
+
+.resume-card-content > :last-child {
+  margin-bottom: 0.75rem;
+}
+
+.resume-card-content ul {
+  padding-left: 1.25rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding-block: 0.5rem;
+}
+
+.skill-group {
+  min-width: 0;
+}
+
+.skill-group h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+.skill-group p {
+  margin: 0;
+  color: var(--ctp-subtext1);
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 1rem 0 3rem;
+  }
+
+  .container {
+    width: min(92%, 1000px);
+  }
+
+  .profile-header {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+
+  .profile-socials {
+    justify-content: center;
+  }
+
+  .resume-card,
+  .skills-card {
+    padding-inline: 1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@media print {
+  :root {
+    --ctp-text: #111;
+    --ctp-subtext1: #222;
+    --ctp-subtext0: #333;
+    --ctp-blue: #111;
+    --ctp-mauve: #111;
+    --ctp-peach: #111;
+    --ctp-base: #fff;
+    --ctp-crust: #fff;
+    --ctp-surface0: #fff;
+  }
+
+  @page {
+    margin: 0.6in;
+  }
+
+  html {
+    background: #fff;
+    color: #111;
+    font-size: 10pt;
+  }
+
+  .section {
+    padding: 0;
+  }
+
+  .container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .profile-header,
+  .resume-card,
+  .skills-card {
+    border: 1px solid #aaa;
+    background: #fff;
+    box-shadow: none;
+  }
+
+  .profile-header,
+  .resume-card,
+  .skills-card,
+  h2,
+  h3 {
+    break-inside: avoid;
+  }
+
+  .profile-socials {
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+  }
+
+  .profile-socials a {
+    color: #111;
+    text-decoration: none;
+  }
+
+  .profile-socials svg {
+    display: none;
+  }
+
+  .profile-socials a::after {
+    content: attr(href);
+    font-size: 8pt;
+  }
+
+  .profile-socials a[href^="mailto:"]::after {
+    content: "pstockdev@gmail.com";
+  }
+}

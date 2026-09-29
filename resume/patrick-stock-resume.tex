@@ -1,0 +1,96 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,left=0.65in,right=0.65in,top=0.7in,bottom=0.65in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{microtype}
+
+\definecolor{accent}{HTML}{3B5CCC}
+\definecolor{muted}{HTML}{444444}
+\hypersetup{colorlinks=true,urlcolor=accent,pdfauthor={Patrick Stock},pdftitle={Patrick Stock - DSP Software Engineer}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\sectiontitle}[1]{%
+  \vspace{1.05em}%
+  {\Large\bfseries\color{accent} #1}\par
+  \vspace{0.25em}\hrule\vspace{0.5em}%
+}
+
+\newcommand{\entry}[4]{%
+  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedleft\arraybackslash}p{2.05in}@{}}
+    {\large\bfseries #1} & \textbf{#2} \\
+    \textit{#3} & \textit{#4}
+  \end{tabularx}\vspace{0.18em}%
+}
+
+\newenvironment{compactitems}{%
+  \begin{list}{$\bullet$}{%
+    \setlength{\leftmargin}{1.1em}%
+    \setlength{\itemindent}{0pt}%
+    \setlength{\itemsep}{0.2em}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{0.25em}%
+  }%
+}{\end{list}}
+
+\begin{document}
+
+\begin{center}
+  {\Huge\bfseries Patrick Stock}\\[0.65em]
+  {\Large\color{accent} DSP Software Engineer}\\[0.4em]
+  \href{mailto:pstockdev@gmail.com}{pstockdev@gmail.com}
+  \enspace$\vert$\enspace
+  \href{https://pstock.dev}{pstock.dev}
+  \enspace$\vert$\enspace
+  \href{https://github.com/pstock7}{github.com/pstock7}
+  \enspace$\vert$\enspace
+  \href{https://www.linkedin.com/in/patricktstock/}{linkedin.com/in/patricktstock}
+\end{center}
+
+\vspace{0.55em}
+DSP software engineer focused on radio signal processing, containerized services, and software-defined radio integration. Experienced developing and testing mission-critical applications and supporting on-site integration events to ensure systems are ready for deployment.
+
+\sectiontitle{Skills}
+\textbf{Languages:} Python, C++, C, Rust, Lua, JavaScript, Java, Nix, Bash\\
+\textbf{Signal Processing:} X-Midas, signal detection and validation, spectrum analysis, software-defined radio integration (Ettus, HTL)\\
+\textbf{Systems \& Messaging:} Linux, Docker, containerized distributed services, ActiveMQ
+
+\sectiontitle{Experience}
+\entry{DSP Software Engineer}{June 2024--Present}{Parsons --- Herndon, Virginia}{}
+\begin{compactitems}
+  \item Serve as a software subject-matter expert at on-site integration events, resolving SDR configuration, signal detection, and distributed-service issues across containerized systems.
+  \item Develop Python services for processing radio IQ data and coordinating Docker containers through an ActiveMQ message broker.
+  \item Designed and implemented an end-to-end RF test service that transmits known signals between system instances and validates resulting detections through the message broker.
+  \item Act as the primary software point of contact for a customer project, supporting integration questions and maintaining continuity for its software architecture.
+\end{compactitems}
+
+\vspace{0.7em}
+{\color{muted!35}\hrule}
+\vspace{0.7em}
+\entry{DSP Software Intern}{Summer 2022 \& Summer 2023}{Parsons --- Herndon, Virginia}{}
+\begin{compactitems}
+  \item Developed a containerized Python application for real-time spectrum visualization, radio control, and signal recording and analysis, including waterfall displays, time-selective and frequency-selective recording, storage-capacity estimates, and tools for reviewing completed recordings.
+  \item Operated SDR equipment and served as a hardware and software resource during a customer demonstration.
+  \item Created a VPN service enabling radios to communicate across networks.
+\end{compactitems}
+
+\sectiontitle{Education}
+\entry{Master of Science in Computer Engineering}{August 2024--Present}{Virginia Tech --- Online}{}
+\textbf{Focus:} Networking \& Cybersecurity\\
+\textbf{Courses Completed:} Information Theory; Network Architecture and Protocols; System and Software Security
+
+\vspace{0.7em}
+{\color{muted!35}\hrule}
+\vspace{0.7em}
+\entry{Bachelor of Science in Computer Engineering}{August 2020--May 2024}{Virginia Tech --- Blacksburg, Virginia}{}
+\textbf{Focus:} Machine Learning \enspace$\vert$\enspace \textbf{Minors:} Computer Science, Cybersecurity, Math\\
+\textbf{Courses Completed:} Network Application Design; Advanced Machine Learning; Computer Organization and Architecture; Computer and Network Security; Embedded Systems; Computer Vision; Cryptography; Artificial Intelligence and Engineering Applications
+
+\end{document}

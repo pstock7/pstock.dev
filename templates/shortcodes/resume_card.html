@@ -1,67 +1,24 @@
-<style>
-  .resume-card {
-    padding: 0.5rem 1.5rem;
-    margin-bottom: 1.0rem;
-    border-radius: 8px;
-    background-color: var(--ctp-surface0);
-    font-size: 0.9rem;
-    line-height: 1.6;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    backface-visibility: hidden;
-    transform: translateZ(0);
-    border: 2px solid var(--ctp-surface0);
-  }
-
-  .resume-card:hover {
-    /* Maintain the translateZ(0) to prevent the layer from dropping during hover */
-    transform: translateY(-3px) translateZ(0);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
-    border-color: var(--ctp-blue);
-  }
-
-  .resume-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .resume-card-title {
-    margin: 0.1rem;
-    font-size: 1.2rem;
-  }
-
-  .resume-card-date, .resume-card-location {
-    font-size: 0.85rem;
-    color: var(--ctp-overlay1);
-    font-style: italic;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    line-height: 0;
-  }
-
-  .lucide-map-pin-icon {
-    stroke: var(--ctp-overlay1);
-  }
-</style>
-
-<div class="resume-card">
-  <div class="resume-card-header">
+<article class="resume-card">
+  <header class="resume-card-header">
     <h3 class="resume-card-title">{{ title }}</h3>
+  </header>
+  <div class="resume-card-metadata">
+    <div class="resume-card-organization">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M6 21V7l6-4 6 4v14"/><path d="M9 9h1"/><path d="M9 13h1"/><path d="M9 17h1"/><path d="M14 9h1"/><path d="M14 13h1"/><path d="M14 17h1"/></svg>
+      <span>{{ organization }}</span>
+    </div>
+    {% if location is defined %}
+      <div class="resume-card-location">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>{{ location }}</span>
+      </div>
+    {% endif %}
     <div class="resume-card-date">
-      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-icon lucide-calendar"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
       <span>{{ date }}</span>
     </div>
   </div>
-  <div class="resume-card-location">
-    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-    <span>{{ location }}</span>
-  </div>
   <div class="resume-card-content">
-    <!-- This renders any Markdown placed inside the shortcode -->
     {{ body | markdown | safe }}
   </div>
-</div>
+</article>

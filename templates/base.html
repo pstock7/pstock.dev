@@ -4,13 +4,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Patrick Stock portfolio">
+  {% set page_title = "Patrick Stock | DSP Software Engineer" %}
+  {% set page_description = "Portfolio of Patrick Stock, a DSP software engineer focused on radio signal processing, containerized services, and software-defined radio integration." %}
+  {% set canonical_url = get_url(path="/") %}
+  {% set social_image_url = get_url(path="social-preview.png") %}
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ page_description }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:site_name" content="Patrick Stock">
   <meta property="og:locale" content="en_US">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pstock.dev/">
-  <meta property="og:description" content="Patrick Stock's professional portfolio">
-  <meta name="description" content="Patrick Stock's professional portfolio">
-  <title>Patrick Stock</title>
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:image" content="{{ social_image_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Patrick Stock, DSP Software Engineer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ page_description }}">
+  <meta name="twitter:image" content="{{ social_image_url }}">
+  <meta name="twitter:image:alt" content="Patrick Stock, DSP Software Engineer">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Patrick Stock",
+      "url": "{{ canonical_url | safe }}",
+      "image": "{{ get_url(path='profile-photo.avif') }}",
+      "jobTitle": "DSP Software Engineer",
+      "email": "mailto:pstockdev@gmail.com",
+      "sameAs": [
+        "https://github.com/pstock7",
+        "https://www.linkedin.com/in/patricktstock/"
+      ]
+    }
+  </script>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="preload" as="image" type="image/avif" href="/profile-photo.avif">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,83 +49,7 @@
   <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   </noscript>
-  <style>
-  :root {
-    /* Catppuccin Mocha Palette */
-
-    /* Accents */
-    --ctp-rosewater: #f5e0dc;
-    --ctp-flamingo: #f2cdcd;
-    --ctp-pink: #f5c2e7;
-    --ctp-mauve: #cba6f7;
-    --ctp-red: #f38ba8;
-    --ctp-maroon: #eba0ac;
-    --ctp-peach: #fab387;
-    --ctp-yellow: #f9e2af;
-    --ctp-green: #a6e3a1;
-    --ctp-teal: #94e2d5;
-    --ctp-sky: #89dceb;
-    --ctp-sapphire: #74c7ec;
-    --ctp-blue: #89b4fa;
-    --ctp-lavender: #b4befe;
-
-    /* Text */
-    --ctp-text: #cdd6f4;
-    --ctp-subtext1: #bac2de;
-    --ctp-subtext0: #a6adc8;
-
-    /* Overlays */
-    --ctp-overlay2: #9399b2;
-    --ctp-overlay1: #7f849c;
-    --ctp-overlay0: #6c7086;
-
-    /* Surfaces */
-    --ctp-surface2: #585b70;
-    --ctp-surface1: #45475a;
-    --ctp-surface0: #313244;
-
-    /* Base Backgrounds */
-    --ctp-base: #1e1e2e;
-    --ctp-mantle: #181825;
-    --ctp-crust: #11111b;
-  }
-
-  html {
-    background-color: var(--ctp-base);
-    color: var(--ctp-text);
-    font-family: 'Inter', sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  a {
-    color: var(--ctp-blue);
-  }
-
-  a:hover {
-    color: var(--ctp-sapphire);
-  }
-
-  h1 {
-    color: var(--ctp-mauve);
-  }
-
-  h2 {
-    color: var(--ctp-peach);
-  }
-
-  h3 {
-    color: var(--ctp-blue);
-  }
-
-  .container {
-    display: grid;
-    margin-inline: auto;
-    justify-content: center;
-    width: 90%;
-    max-width: 1000px;
-  }
-
-</style>
+  <link rel="stylesheet" href="{{ get_url(path='main.css') }}">
 </head>
 
 <body>
