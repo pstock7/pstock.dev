@@ -49,7 +49,7 @@
   <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   </noscript>
-  <link rel="stylesheet" href="{{ get_url(path='main.css') }}">
+  <style>{{ load_data(path="sass/main.scss", format="plain") | safe }}</style>
 </head>
 
 <body>
